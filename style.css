@@ -1,11 +1,15 @@
-/* RESET */
-* { margin: 0; padding: 0; box-sizing: border-box; }
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
 body {
     font-family: "Inter", "Helvetica Neue", Arial, sans-serif;
     color: #2c2c2c;
     background: #fafafa;
     line-height: 1.7;
+    scroll-behavior: smooth;
 }
 
 html {
@@ -19,17 +23,15 @@ html {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 1rem 2rem;
+    padding: 15px;
     position: sticky;
     top: 0;
     z-index: 10;
-    box-shadow: 0 2px 6px rgba(0,0,0,0.2);
 }
 
 .logo {
     font-weight: 700;
-    font-size: 1.3rem;
-    letter-spacing: 0.5px;
+    font-size: 23px;
 }
 
 .logo a {
@@ -44,16 +46,15 @@ html {
 .nav a {
     color: #fff;
     text-decoration: none;
-    margin-left: 1.5rem;
+    margin-left: 15px;
     font-weight: 500;
-    transition: color 0.3s;
 }
 
 .nav a:hover {
     color: #d8bfbf;
 }
 
-/* HERO */
+/* VIDEO - Ondra aka NEZASAHOVAT DO TOHO*/
 .hero {
     background: center/cover no-repeat;
     height: 70vh;
@@ -115,7 +116,7 @@ html {
     color: #2c2c2c;
 }
 
-/* SEKCÍ OBSAH */
+/* SEKCE */
 .section {
     padding: 3rem 2rem;
     max-width: 1000px;
@@ -127,21 +128,10 @@ html {
 
 .section h2 {
     color: #4b0e0e;
-    margin-bottom: 1rem;
+    margin-bottom: 12px;
     font-size: 1.8rem;
     border-bottom: 2px solid #4b0e0e;
     display: inline-block;
-}
-
-.section ul {
-    list-style: disc inside;
-    margin-top: 0.5rem;
-}
-
-.section table {
-    width: 100%;
-    border-collapse: collapse;
-    margin-top: 0.5rem;
 }
 
 .section th, .section td {
@@ -150,16 +140,325 @@ html {
     text-align: left;
 }
 
-/* KONTAKT */
-.section a {
-    color: #4b0e0e;
-    text-decoration: none;
+/* AKTUALITY */
+.current {
+    background: #ffffff;
+    border-radius: 12px;
+    padding: 2.5rem 3rem;
+    max-width: 1200px;
+    margin: 2rem auto;
+    box-shadow: 0 4px 16px rgba(0,0,0,0.08);
+    line-height: 1.6;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.section a:hover {
+.current:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 24px rgba(0,0,0,0.12);
+}
+
+.current h2 {
+    color: #4B0E0E;
+    font-size: 2rem;
+    margin-bottom: 1.2rem;
+    border-bottom: 2px solid #4B0E0EAD;
+    display: inline-block;
+}
+
+.current h3 {
+    color: #4B0E0E;
+    font-size: 1.3rem;
+    margin-top: 1.5rem;
+    margin-bottom: 0.8rem;
+}
+
+.current p {
+    color: #333;
+    font-size: 1rem;
+    margin-bottom: 1rem;
+}
+
+.current p strong {
+    color: #4B0E0EAD;
+}
+
+.current a {
+    color: #4B0E0EAD;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.current a:hover {
     text-decoration: underline;
 }
 
+.current ul {
+    list-style: disc inside;
+    margin: 0.5rem 0 1rem 1rem;
+    padding: 0;
+}
+
+.current ul li {
+    margin-bottom: 0.5rem;
+    font-size: 1rem;
+    color: #333;
+}
+
+/* O NÁS */
+.abt-item {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+.abt-icon-wrap {
+    flex-shrink: 0;
+}
+
+.abt-window {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    background: radial-gradient(circle at 30% 30%, rgba(75, 14, 14, 0.68), rgba(75, 14, 14, 0.68));
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+.abt-icon {
+    font-size: 2rem;
+    color: white;
+}
+
+.abt-text h3 {
+    color: #4b0e0e;
+    font-size: 1.2rem;
+    margin-bottom: 0.3rem;
+}
+
+.abt-text p {
+    color: #333;
+    line-height: 1.6;
+}
+
+/* SLUŽBY*/
+.services-list {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 2rem;
+}
+
+.services-item {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    background-color: #ffffff;
+    border-radius: 14px;
+    padding: 24px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+    transition: all 0.3s ease;
+    border-left: 6px solid transparent;
+}
+
+.services-item:hover {
+    transform: translateY(-5px);
+    border-left: 6px solid #4B0E0EAD;
+    box-shadow: 0 6px 20px rgba(75, 14, 14, 0.15);
+    background-color: #fff9f9;
+}
+
+.services-icon {
+    color: #fff;
+    font-size: 2rem;
+}
+
+.services-icon-wrap {
+    flex-shrink: 0;
+    width: 64px;
+    height: 64px;
+    border-radius: 50%;
+    background: #4B0E0EAD;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.3s ease, background 0.3s ease;
+}
+
+.services-item:hover .services-icon-wrap {
+    background: #4b0e0ecc;
+    transform: scale(1.1);
+}
+
+.services-content h3 {
+    color: #4B0E0E;
+    font-size: 1.25rem;
+    margin-bottom: 0.4rem;
+}
+
+.services-content p {
+    color: #333;
+    font-size: 0.95rem;
+}
+
+/* VYBAVENÍ  */
+.equipment-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 1.5rem;
+    margin-top: 2rem;
+}
+
+.equipment-box {
+    background: #ffffff;
+    border: 1px solid #ddd;
+    border-radius: 12px;
+    padding: 1.5rem 1rem;
+    text-align: center;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+    transition: all 0.35s;
+    position: relative;
+    overflow: hidden;
+    transform: translateY(0);
+}
+
+.equipment-box:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 20px rgba(75, 14, 14, 0.15);
+    border-color: #4B0E0EAD;
+}
+
+.equipment-box iconify-icon {
+    font-size: 2.4rem;
+    color: #4B0E0E;
+    margin-bottom: 0.8rem;
+}
+
+.equipment-box h3 {
+    font-size: 1.15rem;
+    color: #4B0E0E;
+    margin-bottom: 0.4rem;
+}
+
+.equipment-box p {
+    color: #333;
+    font-size: 0.95rem;
+    line-height: 1.6;
+}
+
+/* ORDINAČNÍ HODINY */
+.office-day {
+    background: #ffffff;
+    border-left: 6px solid #4B0E0EAD;
+    border-radius: 12px;
+    padding: 25px;
+    margin-bottom: 20px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+    transition: all 0.3s ease;
+}
+
+.office-day:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 18px rgba(75, 14, 14, 0.15);
+    border-left-color: #4B0E0E;
+}
+
+.office-day h3 {
+    color: #4B0E0E;
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+}
+
+.office-doctor {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-weight: 500;
+    color: #4B0E0E;
+    background: rgba(75,14,14,0.06);
+    padding: 0.4rem 0.8rem;
+    border-radius: 8px;
+    width: fit-content;
+    font-size: 0.95rem;
+    margin-bottom: 0.6rem;
+}
+
+.office-icon {
+    color: #4B0E0EAD;
+    font-size: 1.2rem;
+}
+
+.office-day ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.office-day ul li {
+    color: #444;
+    margin: 0.3rem 0;
+    padding-left: 1rem;
+    position: relative;
+    font-size: 0.95rem;
+}
+
+.office-day ul li::before {
+    content: "•";
+    color: #4B0E0EAD;
+    font-weight: bold;
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
+.office-day em {
+    color: #666;
+    font-style: italic;
+    font-size: 0.9rem;
+}
+
+/* CENÍK */
+.cash {
+    margin-top: 10px;
+    display: flex;
+    font-size: 15px;
+    justify-content: space-between;
+}
+
+.cash-price{
+    color: rgba(75, 14, 14, 0.66);
+    font-weight: bold;
+}
+
+.cash-date {
+    color: #4B0E0E;
+    font-size: 0.8rem;
+    padding: 22px;
+    align-items: center;
+    text-align: center;
+}
+
+/* KONTAKT */
+.kontakt-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.kontakt-text {
+    flex: 1;
+    min-width: 250px;
+}
+
+/* KONTAKT - MAP*/
+.kontakt-map {
+    flex: 1;
+    min-width: 300px;
+}
+
+/* PATIČKA */
 .footer {
     text-align: center;
     background: #4b0e0e;
@@ -173,23 +472,42 @@ html {
     text-decoration: none;
 }
 
-.kontakt-container {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 20px;
+.footer a:hover {
+    text-decoration: underline;
 }
 
-.kontakt-text {
-    flex: 1;
-    min-width: 250px;
+/* MEDIA */
+@media (max-width: 600px) {
+    .onas-box {
+        padding: 1.2rem;
+    }
 }
 
-.kontakt-mapa {
-    flex: 1;
-    min-width: 300px;
+@media (max-width: 700px) {
+    .services-item {
+        flex-direction: column;
+        text-align: center;
+        border-left: none;
+        border-top: 4px solid transparent;
+    }
+    .services-item:hover {
+        border-top: 4px solid #4B0E0EAD;
+    }
+
+    .abt-item {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .abt-window {
+        margin-bottom: 0.8rem;
+    }
+
+    .office-day {
+        padding: 1.2rem;
+    }
 }
 
-/* RESPONSIVITA */
 @media (max-width: 768px) {
     .nav {
         display: none;
@@ -198,370 +516,25 @@ html {
     .hero-overlay h1 {
         font-size: 1.8rem;
     }
-}
 
-
-/* === PŘÍSTROJOVÉ VYBAVENÍ === */
-
-.vybaveni-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-    gap: 1.5rem;
-    margin-top: 2rem;
-}
-
-.vybaveni-box {
-    background: #ffffff;
-    border: 1px solid #ddd;
-    border-radius: 12px;
-    padding: 1.5rem 1rem;
-    text-align: center;
-    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
-    transition: all 0.35s ease;
-    position: relative;
-    overflow: hidden;
-    transform: translateY(0);
-}
-
-.vybaveni-box:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 8px 20px rgba(75, 14, 14, 0.15);
-    border-color: #4B0E0EAD;
-}
-
-.vybaveni-box iconify-icon {
-    font-size: 2.4rem;
-    color: #4B0E0E;
-    margin-bottom: 0.8rem;
-    transition: transform 0.35s ease, color 0.3s ease;
-}
-
-.vybaveni-box:hover iconify-icon {
-    transform: scale(1.2);
-    color: #4B0E0EAD;
-}
-
-/* text */
-.vybaveni-box h3 {
-    font-size: 1.15rem;
-    color: #4B0E0E;
-    margin-bottom: 0.4rem;
-}
-
-.vybaveni-box p {
-    color: #333;
-    font-size: 0.95rem;
-    line-height: 1.6;
-}
-
-/* jemné pozadí při hoveru (volitelné) */
-.vybaveni-box::before {
-    content: "";
-    position: absolute;
-    inset: 0;
-    background: linear-gradient(180deg, rgba(75,14,14,0.05), transparent);
-    opacity: 0;
-    transition: opacity 0.4s ease;
-}
-
-.vybaveni-box:hover::before {
-    opacity: 1;
-}
-
-
-/* === O NÁS – elegantní styl se skvrnou === */
-.onas-item {
-    display: flex;
-    align-items: center;
-    gap: 1.5rem;
-    margin-bottom: 2rem;
-}
-
-.onas-icon-wrap {
-    flex-shrink: 0;
-}
-
-.onas-okno {
-    width: 80px;
-    height: 80px;
-    border-radius: 50%;
-    background: radial-gradient(circle at 30% 30%, rgba(75, 14, 14, 0.68), rgba(75, 14, 14, 0.68));
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
-}
-
-.onas-icon {
-    font-size: 2rem;
-    color: white;
-}
-
-.onas-text h3 {
-    color: #4b0e0e;
-    font-size: 1.2rem;
-    margin-bottom: 0.3rem;
-}
-
-.onas-text p {
-    color: #333;
-    line-height: 1.6;
-}
-
-/* Mobilní zobrazení */
-@media (max-width: 700px) {
-    .onas-item {
-        flex-direction: column;
-        text-align: center;
-    }
-
-    .onas-okno {
-        margin-bottom: 0.8rem;
-    }
-}
-
-/* Mobilní zobrazení */
-@media (max-width: 600px) {
-    .onas-box {
-        padding: 1.2rem;
-    }
-}
-
-/* SLUŽBY*/
-
-.sluzby-list {
-    display: flex;
-    flex-direction: column;
-    gap: 1.5rem;
-    margin-top: 2rem;
-}
-
-.sluzba-item {
-    display: flex;
-    align-items: center;
-    gap: 1.5rem;
-    background-color: #ffffff;
-    border-radius: 14px;
-    padding: 1.5rem 2rem;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
-    transition: all 0.3s ease;
-    border-left: 6px solid transparent;
-}
-
-.sluzba-item:hover {
-    transform: translateY(-5px);
-    border-left: 6px solid #4B0E0EAD;
-    box-shadow: 0 6px 20px rgba(75, 14, 14, 0.15);
-    background-color: #fff9f9;
-}
-
-.sluzba-icon-wrap {
-    flex-shrink: 0;
-    width: 64px;
-    height: 64px;
-    border-radius: 50%;
-    background: #4B0E0EAD;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    transition: transform 0.3s ease, background 0.3s ease;
-}
-
-.sluzba-item:hover .sluzba-icon-wrap {
-    background: #4b0e0ecc;
-    transform: scale(1.1);
-}
-
-.sluzba-icon {
-    color: #fff;
-    font-size: 2rem;
-}
-
-.sluzba-content h3 {
-    color: #4B0E0E;
-    font-size: 1.25rem;
-    margin-bottom: 0.4rem;
-}
-
-.sluzba-content p {
-    color: #333;
-    font-size: 0.95rem;
-    line-height: 1.6;
-}
-
-/* --- Responsivní verze --- */
-@media (max-width: 700px) {
-    .sluzba-item {
-        flex-direction: column;
-        text-align: center;
-        border-left: none;
-        border-top: 4px solid transparent;
-    }
-    .sluzba-item:hover {
-        border-top: 4px solid #4B0E0EAD;
-    }
-}
-
-/* --- ORDINAČNÍ HODINY --- */
-
-.ordinacni-den {
-    background: #ffffff;
-    border-left: 6px solid #4B0E0EAD;
-    border-radius: 12px;
-    padding: 1.5rem;
-    margin-bottom: 1.5rem;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
-    transition: all 0.3s ease;
-}
-
-.ordinacni-den:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 6px 18px rgba(75, 14, 14, 0.15);
-    border-left-color: #4B0E0E;
-}
-
-.ordinacni-den h3 {
-    color: #4B0E0E;
-    font-size: 1.2rem;
-    margin-bottom: 0.5rem;
-}
-
-.ordinacni-lekar {
-    display: flex;
-    align-items: center;
-    gap: 0.4rem;
-    font-weight: 500;
-    color: #4B0E0E;
-    background: rgba(75,14,14,0.06);
-    padding: 0.4rem 0.8rem;
-    border-radius: 8px;
-    width: fit-content;
-    font-size: 0.95rem;
-    margin-bottom: 0.6rem;
-}
-
-.ordinacni-ikona {
-    color: #4B0E0EAD;
-    font-size: 1.2rem;
-}
-
-.ordinacni-den ul {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-}
-
-.ordinacni-den ul li {
-    color: #444;
-    margin: 0.3rem 0;
-    padding-left: 1rem;
-    position: relative;
-    font-size: 0.95rem;
-}
-
-.ordinacni-den ul li::before {
-    content: "•";
-    color: #4B0E0EAD;
-    font-weight: bold;
-    position: absolute;
-    left: 0;
-    top: 0;
-}
-
-.ordinacni-den em {
-    color: #666;
-    font-style: italic;
-    font-size: 0.9rem;
-}
-
-/* Responsivita */
-@media (max-width: 700px) {
-    .ordinacni-den {
-        padding: 1.2rem;
-    }
-}
-
-/* --- SEKCE AKTUALITY --- */
-.aktuality {
-    background: #ffffff; /* světlé pozadí */
-    border-radius: 12px; /* zaoblené rohy */
-    padding: 2.5rem 3rem; /* prostor uvnitř boxu */
-    max-width: 1200px;
-    margin: 2rem auto; /* centrování na stránce */
-    box-shadow: 0 4px 16px rgba(0,0,0,0.08); /* jemný stín */
-    line-height: 1.6;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.aktuality:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 8px 24px rgba(0,0,0,0.12);
-}
-
-.aktuality h2 {
-    color: #4B0E0E;
-    font-size: 2rem;
-    margin-bottom: 1.2rem;
-    border-bottom: 2px solid #4B0E0EAD;
-    display: inline-block;
-}
-
-.aktuality h3 {
-    color: #4B0E0E;
-    font-size: 1.3rem;
-    margin-top: 1.5rem;
-    margin-bottom: 0.8rem;
-}
-
-.aktuality p {
-    color: #333;
-    font-size: 1rem;
-    margin-bottom: 1rem;
-}
-
-.aktuality p strong {
-    color: #4B0E0EAD;
-}
-
-.aktuality a {
-    color: #4B0E0EAD;
-    text-decoration: none;
-    font-weight: 500;
-}
-
-.aktuality a:hover {
-    text-decoration: underline;
-}
-
-.aktuality ul {
-    list-style: disc inside;
-    margin: 0.5rem 0 1rem 1rem;
-    padding: 0;
-}
-
-.aktuality ul li {
-    margin-bottom: 0.5rem;
-    font-size: 1rem;
-    color: #333;
-}
-
-@media (max-width: 768px) {
-    .aktuality {
+    .current {
         padding: 2rem 1.5rem;
     }
 
-    .aktuality h2 {
+    .current h2 {
         font-size: 1.6rem;
     }
 
-    .aktuality h3 {
+    .current h3 {
         font-size: 1.1rem;
     }
 
-    .aktuality p, .aktuality ul li {
+    .current p, .current ul li {
         font-size: 0.95rem;
     }
 }
+
+
 
 
 
