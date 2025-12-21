@@ -430,6 +430,7 @@ html {
 .cash-price{
     color: rgba(75, 14, 14, 0.66);
     font-weight: bold;
+    white-space: nowrap;
 }
 
 .cash-date {
