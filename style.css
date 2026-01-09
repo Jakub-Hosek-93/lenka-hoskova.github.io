@@ -132,6 +132,12 @@ html {
     background: #6a1a1a;
 }
 
+.hero-buttons {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+}
+
 /* SEKCE */
 .section {
     padding: 3rem 2rem;
