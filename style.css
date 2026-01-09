@@ -102,6 +102,7 @@ html {
 
 .btn {
     display: inline-block;
+    font-size: 1.1rem;
     background: #ffffff;
     color: #4b0e0e;
     padding: 0.75rem 1.5rem;
@@ -110,10 +111,25 @@ html {
     text-decoration: none;
     transition: all 0.3s ease;
 }
-
 .btn:hover {
     background: #d8bfbf;
     color: #2c2c2c;
+}
+
+.btn-secondary {
+    display: inline-block;
+    font-size: 1.1rem;
+    background: #4b0e0e;
+    color: #ffffff;
+    padding: 0.75rem 1.5rem;
+    border-radius: 6px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.btn-secondary:hover {
+    background: #6a1a1a;
 }
 
 /* SEKCE */
