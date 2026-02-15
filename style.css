@@ -498,61 +498,180 @@ html {
     text-decoration: underline;
 }
 
-/* MEDIA */
-@media (max-width: 600px) {
-    .onas-box {
-        padding: 1.2rem;
+.menu-toggle {
+    display: none;
+    font-size: 2rem;
+    background: none;
+    border: none;
+    color: white;
+    cursor: pointer;
+}
+
+@media (max-width: 992px) {
+    .section {
+        padding: 2.5rem 1.5rem;
+        margin: 1.5rem 1rem;
+    }
+
+    .hero-overlay h1 {
+        font-size: 2.2rem;
+    }
+
+    .hero-overlay p {
+        font-size: 1.1rem;
+    }
+
+    .current {
+        padding: 2rem 1.5rem;
+        margin: 1.5rem 1rem;
     }
 }
 
-@media (max-width: 700px) {
-    .services-item {
-        flex-direction: column;
-        text-align: center;
-        border-left: none;
-        border-top: 4px solid transparent;
-    }
-    .services-item:hover {
-        border-top: 4px solid #4B0E0EAD;
+@media (max-width: 768px) {
+
+    .header {
+        flex-wrap: wrap;
+        padding: 12px 15px;
     }
 
+    .menu-toggle {
+        display: block;
+    }
+
+    .nav {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        margin-top: 12px;
+        gap: 10px;
+        background: #4b0e0e;
+        padding: 15px;
+        border-radius: 10px;
+    }
+
+    .nav a {
+        margin: 0;
+        padding: 10px;
+        border-radius: 8px;
+        background: rgba(255,255,255,0.08);
+        text-align: center;
+    }
+
+    .nav a:hover {
+        background: rgba(255,255,255,0.15);
+    }
+
+    .nav.nav-open {
+        display: flex;
+    }
+
+    /* HERO */
+    .hero {
+        height: 60vh;
+        padding: 0 1rem;
+    }
+
+    .hero-overlay h1 {
+        font-size: 1.7rem;
+    }
+
+    .hero-overlay p {
+        font-size: 1rem;
+        margin-bottom: 1.5rem;
+    }
+
+    .hero-buttons {
+        flex-direction: column;
+        gap: 0.8rem;
+        align-items: center;
+        display: flex;
+        justify-content: center;
+    }
+
+    .btn, .btn-secondary {
+        width: 100%;
+        max-width: 280px;
+        text-align: center;
+    }
+
+    /* O nás */
     .abt-item {
         flex-direction: column;
         text-align: center;
     }
 
-    .abt-window {
-        margin-bottom: 0.8rem;
+    /* Služby */
+    .services-item {
+        flex-direction: column;
+        text-align: center;
     }
 
-    .office-day {
-        padding: 1.2rem;
+    /* Kontakt */
+    .kontakt-container {
+        flex-direction: column;
+    }
+
+    .kontakt-map iframe {
+        width: 100%;
+        height: 280px;
     }
 }
 
-@media (max-width: 768px) {
-    .nav {
-        display: none;
+@media (max-width: 480px) {
+
+    .logo {
+        font-size: 14px;
+    }
+
+    .hero-overlay {
+        display: flex;
+        align-items: center;
+    }
+
+    .hero-overlay {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
     }
 
     .hero-overlay h1 {
-        font-size: 1.8rem;
+        font-size: 1.4rem;
     }
 
-    .current {
-        padding: 2rem 1.5rem;
+    .hero-overlay p {
+        font-size: 0.85rem;
     }
 
-    .current h2 {
-        font-size: 1.6rem;
+    .section h2 {
+        font-size: 1.4rem;
     }
 
-    .current h3 {
+    .services-content h3 {
         font-size: 1.1rem;
     }
 
-    .current p, .current ul li {
-        font-size: 0.95rem;
+    .equipment-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .office-day {
+        padding: 1rem;
+    }
+
+    .cash {
+        flex-direction: column;
+        gap: 5px;
+        align-items: flex-start;
+    }
+
+    .cash-price {
+        font-size: 1rem;
+    }
+
+    .footer {
+        font-size: 0.8rem;
+        padding: 1.2rem;
     }
 }
 
