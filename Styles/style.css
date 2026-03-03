@@ -593,3 +593,132 @@ html {
         text-align: center;
     }
 }
+
+@media (max-width: 430px) {
+    .header {
+        flex-direction: column;
+        height: auto;
+        align-items: center;
+        padding: 15px;
+        border-radius: 15px;
+    }
+
+    .nav {
+        display: none;
+    }
+
+    .hero h1 {
+        line-height: 1.1;
+        font-size: 32px;
+    }
+
+    .hero p {
+        font-size: 16px;
+    }
+
+    .btn-first {
+        padding: 15px 25px;
+        font-size: 16px;
+    }
+
+    .btn-secondary {
+        padding: 15px 25px;
+        font-size: 16px;
+    }
+
+    .section {
+        padding: 40px 15px;
+    }
+
+    .section h2 {
+        font-size: 28px;
+    }
+
+    .abt-item {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .abt-text h3 {
+        font-size: 20px;
+        margin-bottom: 10px;
+    }
+
+    .abt-text p {
+        font-size: 16px;
+    }
+
+    .abt-stats-item h1 {
+        font-size: 30px;
+        line-height: 1;
+    }
+
+    .abt-stats-description {
+        font-size: 16px;
+    }
+
+    .services-list {
+        grid-template-columns: 1fr;
+        padding: 20px;
+        gap: 20px;
+    }
+
+    .services-item {
+        padding: 20px;
+    }
+
+    .services-content p {
+        font-size: 16px;
+    }
+
+    .equipment-grid {
+        grid-template-columns: 1fr;
+        padding: 20px;
+        gap: 20px;
+    }
+
+    .equipment-box {
+        padding: 25px 20px;
+    }
+
+    .equipment-box p {
+        font-size: 16px;
+    }
+
+    .office-day {
+        padding: 25px 20px;
+    }
+
+    .office-day ul li {
+        font-size: 16px;
+    }
+
+    .cash-items {
+        padding: 20px;
+    }
+
+    .cash p {
+        font-size: 16px;
+    }
+
+    .cash-price {
+        font-size: 16px;
+    }
+
+    .contact-container {
+        padding: 20px;
+    }
+
+    .contact-text p {
+        font-size: 16px;
+    }
+
+    .contact-map iframe {
+        min-height: 250px;
+    }
+
+    .footer {
+        padding: 20px;
+        font-size: 12px;
+    }
+}
