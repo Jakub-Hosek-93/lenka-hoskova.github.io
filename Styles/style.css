@@ -9,7 +9,6 @@ body {
     background-color: rgb(255, 255, 255);
     color: #5a6b7c;
     font-family: 'Inter', system-ui, sans-serif;
-
 }
 
 html {
@@ -222,6 +221,27 @@ html {
 .section h2 {
     color: #36465d;
     margin-bottom: 60px;
+    font-size: 40px;
+    font-weight: 700;
+    text-align: center;
+}
+
+/* ACTUALITIES */
+.actualities-section {
+    padding: 50px;
+    display: flex;
+    flex-direction: column;
+    margin: 25px 25px 25px 25px;
+    background: #fff;
+    z-index: 0;
+    border-radius: 50px;
+    box-shadow: 5px 5px 30px rgba(0, 0, 0, 0.22);
+    text-align: center;
+}
+
+.actualities-section h2 {
+    color: rgba(255, 15, 15, 0.87);
+    margin-bottom: 30px;
     font-size: 40px;
     font-weight: 700;
     text-align: center;
@@ -632,6 +652,18 @@ html {
 
     .section h2 {
         font-size: 28px;
+    }
+
+    .actualities-section {
+
+    }
+
+    .actualities-section h2 {
+        font-size: 28px;
+    }
+
+    .actualities-section h3 {
+        font-size: 16px;
     }
 
     .abt-item {
